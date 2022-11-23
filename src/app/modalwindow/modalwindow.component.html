@@ -1,0 +1,55 @@
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Moddis</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        MODDIS (Mote Data DIsplay System) is a web application allowing the display of live data from motes (arrays of sensors) installed in the Insight building in Galway Ireland.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"
+          data-toggle="modal" data-target="#exampleModalTwo">More</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="exampleModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Moddis</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        The application is divided into three components which represent the three floors of the Insight building. There is two ways to access those components, the first one is to use the side menu on the top left corner of the screen, the second one is to use the tabs situated at the right of the side menu. A few seconds should be allowed when either loading the page or switching between the floors for the first time to allow the data to download and to be processed.
+
+Each dot on the floor plans are buttons which represent each of the motes and their locations inside the building. When hovering over one of the buttons, a textbox should appear and it displays the mote id number, location and platform and its sensors last readings. When clicking on one of the buttons, the mote id number, location and timestamp of the last reading of each of the sensors of the mote should appear at the bottom of the page as well as a table displaying the sensor type, the last reading, the means and standard deviations for the last 24 hours and last week for each of the sensors in the mote selected excepted if this one is lacking data. Each of the tables can be removed by clicking in the top right corner of their own division, the tables removed can be added back up by clicking on their corresponding buttons.
+
+A table displaying the max values of each sensor types present on this floor can be found on the right side of each floor plan as well as a legend explaining the colour scheme for the mote status can be found under the tables.
+
+Two buttons can be found under the floor plan, the first one (Display All Motes Data) will display all the data tables for each mote at the bottom of the screen, the second one (ClearAll) will clear all the tables at the bottom of the screen.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
+        <!-- <button type="button" class="btn btn-primary">More</button> -->
+      </div>
+    </div>
+  </div>
+</div>

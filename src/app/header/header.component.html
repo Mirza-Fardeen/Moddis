@@ -1,0 +1,27 @@
+<div class="container">
+<div class="head"> MODDIS </div>
+  <nav class="navbar navbar-expand-lg" style="border-radius: -1px , -1px , 5px , 5px">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img  [src]="insightLogo" style="height:50px; width:70px">
+        <!-- <a class="navbar-brand" href="#">Yuri Boyka</a> -->
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/">Ground floor</a></li>
+
+        <!-- <li ><a>Ground Floor</a></li> -->
+        <li routerLinkActive="active"><a routerLink="/firstfloor">First Floor</a></li>
+        <li routerLinkActive="active"><a routerLink="/secondfloor">Second Floor </a></li>
+        <li  data-toggle="modal" data-target="#exampleModal"><a> About </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li *ngIf="isAuthenticated">
+          <a style="cursor: pointer" (click)="onLogout()"  >Log out</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+  </div>
+<!--   -->
+<app-modalwindow></app-modalwindow>

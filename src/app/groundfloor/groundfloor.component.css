@@ -1,0 +1,30 @@
+.buttonOne{
+  position: relative ;
+  left: -600px;
+  top:-220px;
+  /* bottom: 100px;
+  top:-215px;
+  left: -600px;
+  width: 60px; */
+  border: 3px solid #73AD21;
+}
+.buttonTwoOFive{
+  position: relative ;
+  left: -600px;
+  top:-170px;
+  border: 3px solid #73AD21;
+}
+.buttonOneOFour{
+  position: relative ;
+  left: -480px;
+  top:-130px;
+  border: 3px solid #73AD21;
+}
+.buttonOneOFive{
+  position: relative ;
+  /* left: -480px;
+  top:-100px; */
+  left: 500px;
+  top: -390px;
+  border: 3px solid #73AD21;
+}

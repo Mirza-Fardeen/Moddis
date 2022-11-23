@@ -1,0 +1,154 @@
+
+<!-- <p>ground floor</p> -->
+<div class="row">
+
+  <div class="col col-lg-8">
+    <!-- blah -->
+    <!-- <div class="buttonOne">
+
+    </div> -->
+      <!-- Card  -->
+
+
+       <!-- Card  Ends -->
+
+
+<div class="container" >
+    <img [src] ="firstfloor"
+ style="height:700px; width:1000px">
+ <button class="buttonOneOthree" (click)="onClickOne('103')"
+ (mouseenter)="onMouseOver('103')"
+ (mouseleave)="onMouseOut()">103</button>
+
+ <button class="buttononeOtwo" (click)="onClickOne('102')"
+ (mouseenter)="onMouseOver('102')"
+ (mouseleave)="onMouseOut()">102</button>
+
+ <button class="buttonTwoOTwo" (click)="onClickOne('202')"
+ (mouseenter)="onMouseOver('202')"
+ (mouseleave)="onMouseOut()">202</button>
+
+ <button class="buttonOneOEight" (click)="onClickOne('108')"
+ (mouseenter)="onMouseOver('108')"
+ (mouseleave)="onMouseOut()">108</button>
+
+ <button class="buttonTwoOfour" (click)="onClickOne('204')"
+ (mouseenter)="onMouseOver('204')"
+ (mouseleave)="onMouseOut()">204</button>
+ <button class="buttonTwoOthree" (click)="onClickOne('203')"
+ (mouseenter)="onMouseOver('203')"
+ (mouseleave)="onMouseOut()">203</button>
+ <button class="buttonOneONine" (click)="onClickOne('109')"
+ (mouseenter)="onMouseOver('109')"
+ (mouseleave)="onMouseOut()">109</button>
+</div>
+
+ <!-- image property ends -->
+  </div>
+
+  <div class="col col-lg-4">
+    <div class="card" style="width: 18rem;" *ngIf="mouseOverEvent && error==null">
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"  >Mote id  {{moddisValue.mote_id}}</li>
+        <li class="list-group-item">Location {{moddisValue.location}}</li>
+        <li class="list-group-item">Platform  {{moddisValue.platform}}</li>
+        <li class="list-group-item" >Pir  {{moddisValue.pir}}</li>
+        <li class="list-group-item" >Acoustic  {{moddisValue.acoustic}}</li>
+        <li class="list-group-item" >Magnetic  {{moddisValue.magnetic}}</li>
+        <li class="list-group-item" > Temperature {{moddisValue.temperature}}</li>
+        <li class="list-group-item" > Humidity {{moddisValue.humidity}}</li>
+        <li class="list-group-item" > Visible Light {{moddisValue.visibleLight}}</li>
+        <li class="list-group-item" > InfraRed Light {{moddisValue.infraredLight}}</li>
+        <li class="list-group-item">Date   {{moddisValue.dateFormat}}</li>
+
+      </ul>
+
+    </div>
+    <div class="card" style="width: 18rem;" *ngIf="error">
+      <li class="list-group-item" style="background-color: rgb(240, 129, 129);" >No data found</li>
+      <ul class="list-group list-group-flush">
+        </ul>
+        </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col col-lg-8">
+    <div class="container" *ngIf="buttonClicked">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sensor Type</th>
+            <th scope="col">Last reading</th>
+            <th scope="col">Mean in Last 24hr</th>
+            <th scope="col">Standard Dev in last 24 hr</th>
+            <th scope="col">Mean in Last Week</th>
+            <th scope="col">Standard Dev in Last week
+              <button class="btn btn-danger" (click)="buttonClicked=false">X</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Pir</th>
+            <td>{{moddisValue.pir}}</td>
+            <td>{{moddisMean.pir}}</td>
+            <td>{{moddisSTDeviation.pir}}</td>
+            <td>{{moddisMeanWeek.pir}}</td>
+            <td>{{moddisSTDeviationWeek.pir}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Magnetic</th>
+            <td>{{moddisValue.magnetic}}</td>
+            <td>{{moddisMean.magnetic}}</td>
+            <td>{{moddisSTDeviation.magnetic}}</td>
+            <td>{{moddisMeanWeek.magnetic}}</td>
+            <td>{{moddisSTDeviationWeek.magnetic}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Acoustic</th>
+            <td>{{moddisValue.acoustic}}</td>
+            <td>{{moddisMean.acoustic}}</td>
+            <td>{{moddisSTDeviation.acoustic}}</td>
+            <td>{{moddisMeanWeek.acoustic}}</td>
+            <td>{{moddisSTDeviationWeek.acoustic}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Temperature</th>
+            <td>{{moddisValue.temperature}}</td>
+            <td>{{moddisMean.temperature}}</td>
+            <td>{{moddisSTDeviation.temperature}}</td>
+            <td>{{moddisMeanWeek.temperature}}</td>
+            <td>{{moddisSTDeviationWeek.temperature}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Humidity</th>
+            <td>{{moddisValue.humidity}}</td>
+            <td>{{moddisMean.humidity}}</td>
+            <td>{{moddisSTDeviation.humidity}}</td>
+            <td>{{moddisMeanWeek.humidity}}</td>
+            <td>{{moddisSTDeviationWeek.humidity}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Visible Light</th>
+            <td>{{moddisValue.visibleLight}}</td>
+            <td>{{moddisMean.visibleLight}}</td>
+            <td>{{moddisSTDeviation.visibleLight}}</td>
+            <td>{{moddisMeanWeek.visibleLight}}</td>
+            <td>{{moddisSTDeviationWeek.visibleLight}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Infrared Light</th>
+            <td>{{moddisValue.infraredLight}}</td>
+            <td>{{moddisMean.infraredLight}}</td>
+            <td>{{moddisSTDeviation.infraredLight}}</td>
+            <td>{{moddisMeanWeek.infraredLight}}</td>
+            <td>{{moddisSTDeviationWeek.infraredLight}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
